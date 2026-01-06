@@ -3,14 +3,18 @@ Aiogram 3.22 asosida Matematika Test Bot
 Foydalanuvchi fullname va natija ADMIN ga yuboriladi
 """
 
+import os
 import asyncio
 import random
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-# 🔑 Tokeningizni shu yerga yozing
-TOKEN = "8124923431:AAEKWZ9lQwFKBtfV4QeuXo9Xxdn75uEb4Z0"
+# 🔑 Token endi atrof-muhit o'zgaruvchisidan olinadi (BOT_TOKEN)
+TOKEN = os.getenv("BOT_TOKEN")
+if not TOKEN:
+    raise RuntimeError("BOT_TOKEN environment variable is not set")
+
 # 👑 Admin (bot egasi) ID
 ADMIN_ID = 6320728801   # o'zingizning Telegram ID raqamingizni yozing
 
