@@ -11,7 +11,7 @@ from aiogram.filters import Command
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 # 🔑 Token endi atrof-muhit o'zgaruvchisidan olinadi (BOT_TOKEN)
-TOKEN = os.getenv("8124923431:AAFfhZpw-uZtcVoYvkmH6PR9e30295ma_Yo")
+TOKEN = os.getenv("BOT_TOKEN")
 if not TOKEN:
     raise RuntimeError("BOT_TOKEN environment variable is not set")
 
